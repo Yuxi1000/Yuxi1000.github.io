@@ -1,0 +1,85 @@
+# Change this to your domain before publishing, for example https://yourname.github.io/
+baseURL: https://yuxi1000.github.io/
+title: Personal Site
+theme: PaperMod
+
+defaultContentLanguage: en
+
+pagination:
+  pagerSize: 10
+
+enableRobotsTXT: true
+buildDrafts: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+params:
+  env: production
+  description: Personal site
+  author: Yuxi Zheng
+  defaultTheme: auto # light, dark, or auto (follow the system)
+  DateFormat: "January 2, 2006"
+  ShowReadingTime: true
+  ShowShareButtons: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowRssButtonInSectionTermList: true
+  UseHugoToc: true
+  mainSections:
+    - posts
+
+  profileMode:
+    enabled: true
+    title: Yuxi Zheng
+    subtitle: A short line about yourself
+    buttons:
+      - name: Posts
+        url: posts
+      - name: About
+        url: about
+
+  socialIcons:
+    - name: github
+      url: https://github.com/
+    - name: email
+      url: mailto:you@example.com
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    limit: 10
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - name: Posts
+      url: /posts/
+      weight: 10
+    - name: Archive
+      url: /archives/
+      weight: 20
+    - name: Search
+      url: /search/
+      weight: 30
+    - name: About
+      url: /about/
+      weight: 40
+
+markup:
+  highlight:
+    noClasses: false
+    lineNos: false
